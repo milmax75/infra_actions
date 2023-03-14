@@ -77,5 +77,5 @@ jobs:
           # Выполняет pull образа с DockerHub
           sudo docker pull  milmax/infra_actions
           #остановка всех контейнеров
-          sudo docker stop $(sudo docker ps -a -q)
+          sudo docker ps -a -q
           sudo docker run --rm -d -p 5000:5000 milmax/infra_actions
